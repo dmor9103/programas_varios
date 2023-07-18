@@ -1,0 +1,29 @@
+Algoritmo sin_titulo
+	//	2.	Realizar la conversión de una temperatura dada en grados Centígrados a grados Fahrenheit
+	//	La formula para convertir grados Celcius a grados Fahrenheit es: F° = ((C° - 1.8) + 32
+	// 	La formula para convertir grados Fahrenheit a grados Celcius es C° = ((F° - 32) * 5) / 5
+	Repetir
+		Repetir
+			escribir "Que tipo de medicion de temperatura usara"
+			escribir "- F = por grados Fahrenheit"
+			escribir "- C = por grados Centigrados/Celcius"
+			leer tmp1
+			si tmp1 <> "f" Y tmp1 <> "c" Entonces
+				escribir "Opcion incorrecta... vuelve a intentarlo"
+			FinSi
+		Hasta Que tmp1 = "f" o tmp1 = "c"
+		si tmp1 = "f" Entonces
+			escribir "Digite los grados Fahrenheit que desea convertir a grados Celcius"
+			leer tmp2
+			tmp3 = ((tmp2 - 32) * 5) / 9
+			escribir tmp2 "° Fahrenheit, equivalen a " tmp3 "° Celcius"
+		SiNo
+			escribir "Digite los grados Celcius que desea convertir a grados Fahrenheit"
+			leer tmp2
+			tmp3 = (tmp2 - 1.8) + 32
+			escribir tmp2 "° Celcius, equivalen a " tmp3 "° Fahrenheit"
+		FinSi
+		escribir "Quieres repetir? S=0/N=1"
+		leer cont
+	Hasta Que cont = 1
+FinAlgoritmo
